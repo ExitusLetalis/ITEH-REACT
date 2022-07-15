@@ -1,8 +1,35 @@
 * {
   margin: 0;
-  padding: 0;
 }
 
 .nav-div{
-  background-color: black;
+  background-color: #1e1e1e;
+  height: 60px;
+}
+
+.nav-div a {
+  margin-left: 20px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.nav-div a:visited {
+  color: white;
+}
+
+.link-div{
+  padding-top: 10px;
+}
+
+#rez-nav{
+  margin-left: 810px;
+}
+
+.image-home {
+    background-image: url("https://www.insidesport.in/wp-content/uploads/2022/04/byersandco-wimbledon-1594393920819.jpg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
