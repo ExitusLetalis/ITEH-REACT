@@ -33,3 +33,25 @@
     background-position: center;
     background-size: cover;
 }
+
+
+.form-r{
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    grid-template-rows: 200px 200px 200px;
+    grid-column-gap: 100px;
+    justify-content: center;
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    height: 400px;
+}
+
+
+#rezervisi-button{
+  margin-left: 800px;
+  height: 60px;
+  width: 300px;
+  font-size: 28px;
+}

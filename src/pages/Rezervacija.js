@@ -1,4 +1,5 @@
 import Nav from "../components/Nav";
+import RezForm from "../components/RezForm";
 
 
 const Rezervacija = () => {
@@ -13,10 +14,11 @@ const Rezervacija = () => {
 
     return (
         <div className="rezervacija-div">
+
             <Nav />
 
             <div className="image-home">
-
+                <RezForm />
             </div>
 
 
