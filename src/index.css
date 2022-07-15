@@ -62,3 +62,16 @@
   color: white;
   font-size: 50px;
 }
+
+#kont-naslov{
+  margin-left: 750px;
+  padding-top: 5px;
+  color: white;
+  font-size: 60px;
+}
+
+#sendmessage-button{
+  height: 65px;
+  margin-top: 50px;
+  font-size: 35px;
+}

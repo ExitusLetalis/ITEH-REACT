@@ -1,7 +1,7 @@
 import Nav from "../components/Nav";
 import RezForm from "../components/RezForm";
 import Swal from 'sweetalert2';
-import { Navigate } from "react-router-dom";
+
 
 const Rezervacija = () => {
 
@@ -14,9 +14,7 @@ const Rezervacija = () => {
     ]
 
 
-    function handleSubmit(termin) {
-
-        console.log(termini);
+    const handleSubmit = (termin) => {
 
         const zauzet = false;
 
