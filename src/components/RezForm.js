@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const RezForm = () => {
+const RezForm = (props) => {
 
     const [termin, setTermin] = useState({
         id: '',
@@ -11,15 +11,14 @@ const RezForm = () => {
         trajanje: '',
     });
 
-    const handleSubmit = () => {
-
-    }
 
 
     return (
         <div className="rezform-div">
 
-            <form onSubmit={handleSubmit} id="rezforma">
+            <h1 id="reznaslov">{props.naslov}</h1>
+
+            <form id="rezforma">
                 <div className='form-r'>
                     <div>
                         <label>ID</label>
@@ -46,7 +45,7 @@ const RezForm = () => {
                         <input type="text" className="form-control" value={termin.trajanje} onChange={e => setTermin({ ...termin, trajanje: e.target.value })} />
                     </div>
                 </div>
-                <button type="submit" id="rezervisi-button" className="btn btn-primary">Rezerviši termin</button>
+                <button type="button" onClick={() => props.handleSubmit(termin)} id="rezervisi-button" className="btn btn-primary">Rezerviši termin</button>
             </form>
         </div >
     );

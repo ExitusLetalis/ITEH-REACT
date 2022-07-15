@@ -1,6 +1,7 @@
 import Nav from "../components/Nav";
 import RezForm from "../components/RezForm";
-
+import Swal from 'sweetalert2';
+import { Navigate } from "react-router-dom";
 
 const Rezervacija = () => {
 
@@ -12,13 +13,50 @@ const Rezervacija = () => {
 
     ]
 
+
+    function handleSubmit(termin) {
+
+        console.log(termini);
+
+        const zauzet = false;
+
+        for (let i = 0; i < termini.length; i++) {
+
+            if (termini[i].datum == termin.datum && termini[i].vreme == termin.vreme && termini[i].teren == termin.teren) {
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Info',
+                    text: 'Traženi termin je zauzet!'
+                })
+                zauzet = true;
+            }
+
+            if (zauzet) {
+                break;
+            }
+        }
+
+        termini.push(termin)
+        Swal.fire({
+            icon: 'success',
+            title: 'Info',
+            text: 'Traženi trening termin je uspešno rezervisan!'
+        })
+
+    }
+
+
+    const p = 'Rezervacija trening termina';
+
+
     return (
         <div className="rezervacija-div">
 
             <Nav />
 
             <div className="image-home">
-                <RezForm />
+                <RezForm naslov={p} handleSubmit={handleSubmit} />
             </div>
 
 
